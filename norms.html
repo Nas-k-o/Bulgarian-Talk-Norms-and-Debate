@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Questionnaire</title>
+    <title>Упражнения - Книжовни норми</title> 
     <link rel="stylesheet" href="css/norms.css">
 </head>
 <body>
 
+<div class="container">
     <h1>Обобщителни упражнения върху книжовните норми</h1>
 
     <button id="startButton">Започни упражнението</button>
@@ -16,48 +17,204 @@
         <form id="quizForm">
 
             <div class="question-container">
-                <p><strong>1. What is the primary goal of constructive feedback?</strong></p>
+                <p><strong>1. Кое изписване е правилно?</strong></p>
                 <label>
-                    <input type="radio" name="q1" value="a"> To criticize the person
-                </label><br>
+                    <input type="radio" name="q1" value="a"> Пясък
+                </label>
                 <label>
-                    <input type="radio" name="q1" value="b"> To help the person improve
-                </label><br>
+                    <input type="radio" name="q1" value="b"> Пясюк
+                </label>
                 <label>
-                    <input type="radio" name="q1" value="c"> To show your superiority
-                </label><br>
+                    <input type="radio" name="q1" value="c"> Песък
+                </label>
                 <label>
-                    <input type="radio" name="q1" value="d"> To end the conversation quickly
-                </label><br>
+                    <input type="radio" name="q1" value="d"> Пясек
+                </label>
                 <div class="explanation" id="explanation1">
-                    <strong>Explanation:</strong> The main purpose of constructive feedback is to provide specific, actionable suggestions that help the recipient understand areas for development and how they can improve their performance or behavior. While it might point out flaws, the intent is positive and growth-oriented.
+                    <strong>Обяснение:</strong> Правилното изписване на думата е "Пясък".
                 </div>
             </div>
 
             <div class="question-container">
-                <p><strong>2. During a debate, what does 'active listening' involve?</strong></p>
+                <p><strong>2. Къде трябва да се постави запетая в изречението: "Ако вали ще останем вкъщи."?</strong></p>
                 <label>
-                    <input type="radio" name="q2" value="a"> Waiting for your turn to speak
-                </label><br>
+                    <input type="radio" name="q2" value="a"> След "вали"
+                </label>
                 <label>
-                    <input type="radio" name="q2" value="b"> Planning your rebuttal while the other person talks
-                </label><br>
+                    <input type="radio" name="q2" value="b"> След "ще"
+                </label>
                 <label>
-                    <input type="radio" name="q2" value="c"> Fully concentrating on and understanding the speaker
-                </label><br>
+                    <input type="radio" name="q2" value="c"> След "ако"
+                </label>
                 <label>
-                    <input type="radio" name="q2" value="d"> Interrupting to correct factual errors immediately
-                </label><br>
+                    <input type="radio" name="q2" value="d"> Не се нуждае от запетая
+                </label>
                 <div class="explanation" id="explanation2">
-                    <strong>Explanation:</strong> Active listening means focusing completely on the speaker, understanding their message, comprehending the information, and responding thoughtfully. It's about absorbing what's being said, not just preparing your own points.
+                    <strong>Обяснение:</strong> В сложното съставно изречение с подчинено обстоятелствено изречение за условие ("Ако вали"), запетая се поставя пред главното изречение ("ще останем вкъщи"), т.е. след "вали".
                 </div>
             </div>
 
-           
+            <div class="question-container">
+                <p><strong>3. Какъв род е думата "кафе"?</strong></p>
+                <label>
+                    <input type="radio" name="q3" value="a"> Мъжки
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="b"> Женски
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="c"> Среден
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="d"> Общ
+                </label>
+                <div class="explanation" id="explanation3">
+                    <strong>Обяснение:</strong> Думата "кафе" е от среден род в българския език.
+                </div>
+            </div>
 
-        </form>
-    </div>
+            <div class="question-container">
+                <p><strong>4. Къде пада ударението в думата "градина"?</strong></p>
+                <label>
+                    <input type="radio" name="q4" value="a"> На първата сричка (гра-)
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="b"> На втората сричка (-ди-)
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="c"> На третата сричка (-на)
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="d"> Няма ударение
+                </label>
+                <div class="explanation" id="explanation4">
+                    <strong>Обяснение:</strong> Ударението в думата "градина" пада на последната сричка: гради́на.
+                </div>
+            </div>
 
-    <script src="js/startQuiz.js" ></script>
+            <div class="question-container">
+                <p><strong>5. Кое е правилното множествено число на "къща"?</strong></p>
+                <label>
+                    <input type="radio" name="q5" value="a"> Къщи
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="b"> Къщове
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="c"> Къщии
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="d"> Къщета
+                </label>
+                <div class="explanation" id="explanation5">
+                    <strong>Обяснение:</strong> Правилното множествено число на "къща" е "къщи".
+                </div>
+            </div>
+
+            <div class="question-container">
+                <p><strong>6. Изберете правилния вариант:</strong></p>
+                <label>
+                    <input type="radio" name="q6" value="a"> Петстоттин
+                </label>
+                <label>
+                    <input type="radio" name="q6" value="b"> Петстотин
+                </label>
+                <label>
+                    <input type="radio" name="q6" value="c"> Пестотин
+                </label>
+                <label>
+                    <input type="radio" name="q6" value="d"> Петстотиин
+                </label>
+                <div class="explanation" id="explanation6">
+                    <strong>Обяснение:</strong> Правилното изписване на числителното име е "петстотин". (Забележка: Опциите в оригиналния въпрос бяха дублирани, коригирах ги за яснота).
+                </div>
+            </div>
+
+            <div class="question-container">
+                <p><strong>7. Кой глагол е правилен?</strong></p>
+                <label>
+                    <input type="radio" name="q7" value="a"> Пече
+                </label>
+                <label>
+                    <input type="radio" name="q7" value="b"> Пека
+                </label>
+                <label>
+                    <input type="radio" name="q7" value="c"> Пеке
+                </label>
+                <label>
+                    <input type="radio" name="q7" value="d"> Пеквам
+                </label>
+                <div class="explanation" id="explanation7">
+                    <strong>Обяснение:</strong> Правилната форма на глагола в 1 л. ед.ч., сег. време е "пека". "Пече" е 3 л. ед.ч.
+                </div>
+            </div>
+
+            <div class="question-container">
+                <p><strong>8. Кое изписване на птицата "щраус" е вярно?</strong></p>
+                <label>
+                    <input type="radio" name="q8" value="a"> Щраус
+                </label>
+                <label>
+                    <input type="radio" name="q8" value="b"> Щраусс
+                </label>
+                <label>
+                    <input type="radio" name="q8" value="c"> Щрауз
+                </label>
+                <label>
+                    <input type="radio" name="q8" value="d"> Щрауц
+                </label>
+                <div class="explanation" id="explanation8">
+                    <strong>Обяснение:</strong> Правилното изписване на думата е "щраус".
+                </div>
+            </div>
+
+            <div class="question-container">
+                <p><strong>9. Попълнете празното място: "Дадох книга на __."</strong></p>
+                <label>
+                    <input type="radio" name="q9" value="a"> приятел
+                </label>
+                <label>
+                    <input type="radio" name="q9" value="b"> приятеля
+                </label>
+                <label>
+                    <input type="radio" name="q9" value="c"> приятелът
+                </label>
+                <label>
+                    <input type="radio" name="q9" value="d"> приятелят
+                </label>
+                <div class="explanation" id="explanation9">
+                    <strong>Обяснение:</strong> В случая е необходима членувана форма за винителен падеж (макар и неформално маркиран в българския), която е "приятеля".
+                </div>
+            </div>
+
+            <div class="question-container">
+                <p><strong>10. Кой предлог е правилен: "Отивам __ училище."?</strong></p>
+                <label>
+                    <input type="radio" name="q10" value="a"> на
+                </label>
+                <label>
+                    <input type="radio" name="q10" value="b"> в
+                </label>
+                <label>
+                    <input type="radio" name="q10" value="c"> към
+                </label>
+                <label>
+                    <input type="radio" name="q10" value="d"> до
+                </label>
+                <div class="explanation" id="explanation10">
+                    <strong>Обяснение:</strong> Правилният предлог за посока към затворено пространство или институция като училище е "в".
+                </div>
+            </div>
+
+            <button type="submit" id="submitButton">Предай отговорите</button> 
+
+        </form> 
+
+        <div id="results-area" style="margin-top: 20px; font-weight: bold;"></div> 
+
+    </div> 
+</div> 
+
+<script src="js/startQuiz.js"></script>
 </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire</title>
+    <link rel="stylesheet" href="css/norms.css">
+</head>
+<body>
+
+    <h1>Обобщителни упражнения върху книжовните норми</h1>
+
+    <button id="startButton">Започни упражнението</button>
+
+    <div id="questionnaire-area">
+        <form id="quizForm">
+
+            <div class="question-container">
+                <p><strong>1. What is the primary goal of constructive feedback?</strong></p>
+                <label>
+                    <input type="radio" name="q1" value="a"> To criticize the person
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="b"> To help the person improve
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="c"> To show your superiority
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="d"> To end the conversation quickly
+                </label><br>
+                <div class="explanation" id="explanation1">
+                    <strong>Explanation:</strong> The main purpose of constructive feedback is to provide specific, actionable suggestions that help the recipient understand areas for development and how they can improve their performance or behavior. While it might point out flaws, the intent is positive and growth-oriented.
+                </div>
+            </div>
+
+            <div class="question-container">
+                <p><strong>2. During a debate, what does 'active listening' involve?</strong></p>
+                <label>
+                    <input type="radio" name="q2" value="a"> Waiting for your turn to speak
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="b"> Planning your rebuttal while the other person talks
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="c"> Fully concentrating on and understanding the speaker
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="d"> Interrupting to correct factual errors immediately
+                </label><br>
+                <div class="explanation" id="explanation2">
+                    <strong>Explanation:</strong> Active listening means focusing completely on the speaker, understanding their message, comprehending the information, and responding thoughtfully. It's about absorbing what's being said, not just preparing your own points.
+                </div>
+            </div>
+
+           
+
+        </form>
+    </div>
+
+    <script src="js/startQuiz.js" ></script>
+</body>
+</html>

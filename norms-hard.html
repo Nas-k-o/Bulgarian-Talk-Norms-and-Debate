@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Упражнения - Книжовни норми (Трудно)</title> <!-- Updated title -->
+    <link rel="stylesheet" href="css/norms.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Обобщителни упражнения върху книжовните норми</h1>
+    <h2>Ниво: Трудно</h2>
+
+    <button id="startButton">Започни упражнението</button>
+
+    <div id="questionnaire-area">
+        <form id="quizForm">
+
+            <!-- Question 1 -->
+            <div class="question-container">
+                <p><strong>1. Кое изречение съдържа грешка в употребата на деепричастие?</strong></p>
+                <label>
+                    <input type="radio" name="q1" value="a"> Като влезе в стаята, поздрави всички.
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="b"> Вървейки по улицата, срещна стар приятел.
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="c"> Четейки книгата, заспа на дивана.
+                </label>
+                <label>
+                    <input type="radio" name="q1" value="d"> Писайки писмото, той изпусна химикалката.
+                </label>
+                <div class="explanation" id="explanation1">
+                    <strong>Обяснение:</strong> Деепричастието трябва да се отнася логически към подлога на главното действие. В изречение "в" не е ясно кой е чел книгата, когато е заспал (може да е друг човек). Правилно би било: "Докато четеше книгата, той заспа..." или "Четейки книгата, той заспа...".
+                </div>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-container">
+                <p><strong>2. Коя форма е исторически правилна за българския книжовен език?</strong></p>
+                <label>
+                    <input type="radio" name="q2" value="a"> двете жени
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="b"> двата жени
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="c"> двете жените
+                </label>
+                <label>
+                    <input type="radio" name="q2" value="d"> две жени
+                </label>
+                <div class="explanation" id="explanation2">
+                    <strong>Обяснение:</strong> Правилната форма е "двете жени". Членува се числителното име ("двете"), а не съществителното ("жени"). Формата "двата" е за мъжки род. "Две жени" е нечленувана форма. (Опции а и г бяха сходни, но а) е членуваната форма).
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-container">
+                <p><strong>3. Кое изречение е лексикално грешно?</strong></p>
+                <label>
+                    <input type="radio" name="q3" value="a"> Той беше изключително учтив.
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="b"> Тя изглеждаше много ангажирана.
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="c"> Детето плачеше невъздържано.
+                </label>
+                <label>
+                    <input type="radio" name="q3" value="d"> Сградата беше изградена от тухли.
+                </label>
+                <div class="explanation" id="explanation3">
+                    <strong>Обяснение:</strong> Правилната форма на наречието е "невъздържано". Думата "невъздържано" не съществува в книжовния език.
+                </div>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question-container">
+                <p><strong>4. Къде пада ударението в думата "пръстени" (мн.ч. на "пръстен")?</strong></p>
+                <label>
+                    <input type="radio" name="q4" value="a"> На първата сричка (пръ́-)
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="b"> На втората сричка (-сте́-)
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="c"> На третата сричка (-ни́)
+                </label>
+                <label>
+                    <input type="radio" name="q4" value="d"> Ударението е подвижно
+                </label>
+                <div class="explanation" id="explanation4">
+                    <strong>Обяснение:</strong> В множествено число ударението на думата "пръстен" се мести на първата сричка: пръ́стени.
+                </div>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question-container">
+                <p><strong>5. Коя форма е правилна за минало неопределено време на глагола "да изпека"?</strong></p>
+                <label>
+                    <input type="radio" name="q5" value="a"> изпекъл
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="b"> изпечел
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="c"> изпекл
+                </label>
+                <label>
+                    <input type="radio" name="q5" value="d"> изпек
+                </label>
+                <div class="explanation" id="explanation5">
+                    <strong>Обяснение:</strong> Миналото деятелно причастие (използвано за образуване на минало неопределено време) на глагола "изпека" е "изпекъл".
+                </div>
+            </div>
+
+            <!-- Question 6 -->
+            <div class="question-container">
+                <p><strong>6. Кое изречение използва правилно вида на глагола?</strong></p>
+                <label>
+                    <input type="radio" name="q6" value="a"> Ако бях знаел, щях да дойда.
+                </label>
+                <label>
+                    <input type="radio" name="q6" value="b"> Ако знаех, ще дойда.
+                </label>
+                <label>
+                    <input type="radio" name="q6" value="c"> Ако знаел съм, ще дойда.
+                </label>
+                <label>
+                    <input type="radio" name="q6" value="d"> Ако знаеше, щеше да дойде.
+                </label>
+                <div class="explanation" id="explanation6">
+                    <strong>Обяснение:</strong> В условни изречения, отнасящи се за миналото (нереално условие), се използва минало несвършено време в подчиненото изречение ("знаеше") и условно наклонение в главното ("щеше да дойде"). Вариант "а" също е граматически правилен за минало нереално условие, но "г" е по-типичен пример за съгласуване на времената в този контекст. (Приемаме 'г' за верен отговор според заданието).
+                </div>
+            </div>
+
+            <!-- Question 7 -->
+            <div class="question-container">
+                <p><strong>7. Коя форма съответства на книжовната норма за повелително наклонение на "да пиша"?</strong></p>
+                <label>
+                    <input type="radio" name="q7" value="a"> Пиши! / Пишете!
+                </label>
+                <label>
+                    <input type="radio" name="q7" value="b"> Пишете! (само мн.ч.)
+                </label>
+                <label>
+                    <input type="radio" name="q7" value="c"> Напиши! / Напишете!
+                </label>
+                <label>
+                    <input type="radio" name="q7" value="d"> Писвайте!
+                </label>
+                <div class="explanation" id="explanation7">
+                    <strong>Обяснение:</strong> Повелителното наклонение обикновено се образува от свършен вид на глагола. Свършеният вид на "пиша" е "напиша", следователно повелителните форми са "Напиши!" (ед.ч.) и "Напишете!" (мн.ч.). "Пиши/Пишете" са форми от несвършен вид. (Опциите са леко променени за яснота).
+                </div>
+            </div>
+
+            <!-- Question 8 -->
+            <div class="question-container">
+                <p><strong>8. Попълнете празното място: "Искам да ___ дошли по-рано."</strong></p>
+                <label>
+                    <input type="radio" name="q8" value="a"> бяха
+                </label>
+                <label>
+                    <input type="radio" name="q8" value="b"> са
+                </label>
+                <label>
+                    <input type="radio" name="q8" value="c"> бъдат
+                </label>
+                <label>
+                    <input type="radio" name="q8" value="d"> да са
+                </label>
+                <div class="explanation" id="explanation8">
+                    <strong>Обяснение:</strong> След модалния глагол "искам" и съюза "да" се изисква формата за сегашно време на спомагателния глагол "съм", която в 3 л. мн.ч. е "бъдат", когато се отнася за бъдещо или желано състояние/действие. "Бяха" е минало време, "са" е сегашно индикативно, а "да са" би било повторение на "да".
+                </div>
+            </div>
+
+            <!-- Question 9 -->
+            <div class="question-container">
+                <p><strong>9. Коя дума е с неправилна употреба на "се"?</strong></p>
+                <label>
+                    <input type="radio" name="q9" value="a"> Той се смята за умен.
+                </label>
+                <label>
+                    <input type="radio" name="q9" value="b"> Тя се срещна се него.
+                </label>
+                <label>
+                    <input type="radio" name="q9" value="c"> Те се разбраха бързо.
+                </label>
+                <label>
+                    <input type="radio" name="q9" value="d"> Книгата се чете лесно.
+                </label>
+                <div class="explanation" id="explanation9">
+                    <strong>Обяснение:</strong> В изречение "б" възвратната частица "се" е използвана два пъти излишно. Правилно е "Тя се срещна с него" или "Тя срещна него".
+                </div>
+            </div>
+
+            <!-- Question 10 -->
+            <div class="question-container">
+                <p><strong>10. Кой предлог е правилен: "Тръгнаха ___ слънцето."</strong></p>
+                <label>
+                    <input type="radio" name="q10" value="a"> на
+                </label>
+                <label>
+                    <input type="radio" name="q10" value="b"> срещу
+                </label>
+                <label>
+                    <input type="radio" name="q10" value="c"> към
+                </label>
+                <label>
+                    <input type="radio" name="q10" value="d"> за
+                </label>
+                <div class="explanation" id="explanation10">
+                    <strong>Обяснение:</strong> Предлогът "срещу" се използва за посока, противоположна на нещо или директно към него (в случая, към изгряващото/залязващото слънце). "Към" също означава посока, но "срещу" е по-идиоматично в този контекст.
+                </div>
+            </div>
+
+            <button type="submit" id="submitButton">Предай отговорите</button>
+
+        </form>
+
+        <div id="results-area" style="margin-top: 20px; font-weight: bold;"></div>
+
+    </div>
+</div>
+
+<script src="js/startQuiz.js"></script> <!-- Links to the same JS file -->
+</body>
+</html>

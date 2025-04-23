@@ -16,13 +16,6 @@ def calculate_test_results():
     range_ = maximum - minimum
     percentile_25 = df['Results'].quantile(0.25)
     percentile_75 = df['Results'].quantile(0.75)
-    iqr = percentile_75 - percentile_25
-    skewness = df['Results'].skew()
-    kurtosis = df['Results'].kurtosis()
-    percentile_95 = df['Results'].quantile(0.95)
-    percentile_99 = df['Results'].quantile(0.99)
-    percentile_90 = df['Results'].quantile(0.90)
-    percentile_10 = df['Results'].quantile(0.10)
 
     return {
         'results': results,
@@ -36,13 +29,6 @@ def calculate_test_results():
         'range_': range_,
         'percentile_25': percentile_25,
         'percentile_75': percentile_75,
-        'iqr': iqr,
-        'skewness': skewness,
-        'kurtosis': kurtosis,
-        'percentile_95': percentile_95,
-        'percentile_99': percentile_99,
-        'percentile_90': percentile_90,
-        'percentile_10': percentile_10,
     }
 
 
@@ -61,12 +47,6 @@ def Main():
     print("25-ти процентил:", stats['percentile_25'])
     print("75-ти процентил:", stats['percentile_75'])
     print("Интерквартилен обхват:", stats['iqr'])
-    print("Скюност:", stats['skewness'])
-    print("Куртоза:", stats['kurtosis'])
-    print("95-ти процентил:", stats['percentile_95'])
-    print("99-ти процентил:", stats['percentile_99'])
-    print("90-ти процентил:", stats['percentile_90'])
-    print("10-ти процентил:", stats['percentile_10'])
     save_plots(results)
     print("Графиките са запазени в папка images")
 

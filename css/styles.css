@@ -1,33 +1,153 @@
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Frutiger+Aero&display=swap');
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+}
+
+body {
+    font-family: 'Frutiger Aero', sans-serif;
+    background: linear-gradient(135deg, #62cff4, #2c67f2);
     color: #333;
-  }
-  
-  header, footer {
-    background-color: #0c3c78;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+header {
+    background: linear-gradient(90deg, #06c0e6, #14dee2);
     color: white;
-    padding: 1rem;
+    padding: 30px 20px;
     text-align: center;
-  }
-  
-  nav ul {
-    list-style: none;
-    padding: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+nav ul {
     display: flex;
     justify-content: center;
-    gap: 1rem;
-  }
-  
-  nav a {
+    gap: 20px;
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+nav a {
     color: white;
     text-decoration: none;
     font-weight: bold;
-  }
-  
-  main {
-    padding: 2rem;
-  }
-  
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+main {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: grid;
+    gap: 30px;
+}
+
+section {
+    background: linear-gradient(135deg, #ffffff, #e0f7fa);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+    color: #0a9396;
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    text-align: center;
+    color: #005f73;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 40px;
+    color: #005f73;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: linear-gradient(90deg, #06c0e6, #14dee2);
+    color: white;
+    margin-top: 60px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+.navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style-type: none;
+  margin-top: 10px;
+  position: relative;
+}
+
+.navbar li {
+  position: relative;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background 0.3s;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: linear-gradient(135deg, #ffffff, #e0f7fa);
+  min-width: 160px;
+  border-radius: 8px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+}
+
+.dropdown-content li {
+  padding: 8px 0;
+  text-align: left;
+}
+
+.dropdown-content li a {
+  display: block;
+  padding: 10px 20px;
+  color: #005f73;
+  background: transparent;
+  text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+  background-color: #d2f4f8;
+  color: #000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}

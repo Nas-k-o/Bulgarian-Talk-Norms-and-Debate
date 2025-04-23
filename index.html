@@ -9,24 +9,69 @@
 <body>
   <header>
     <h1>БЪЛГАРСКО СЛОВО: Норми и Дебати</h1>
-    <nav class="main-nav">
-      <ul>
-          <li><a href="index.html">Начало</a></li> <!-- Link to your main index/home page -->
-          <li><a href="theory.html">Теория</a></li> <!-- Link to your theory page -->
-          <!-- Optional: Link back to a page listing all quizzes -->
-          <!-- <li><a href="quizzes.html">Всички Упражнения</a></li> -->
+    <nav>
+      <ul class="navbar">
+        <li><a href="theory.html">Теория</a></li>
+        <li class="dropdown">
+          <a href="quizzes.html">Упражнения</a>
+          <ul class="dropdown-content">
+            <li><a href="norms-easy.html">Лесен тест</a></li>
+            <li><a href="norms-medium.html">Средна трудност Тест</a></li>
+            <li><a href="norms-easy.html">Труден тест</a></li>
+          </ul>
+        </li>
       </ul>
-  </nav>
+    </nav>
   </header>
 
   <main>
     <section>
-      <h2>Добре дошъл</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-        aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-        sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h1>БЪЛГАРСКО СЛОВО: Норми и Дебати</h1>
+      <p>Образователна платформа за изучаване на норми на българския език и водене на ефективни дискусии.</p>
+      интерактивни въпроси.</p>
+
     </section>
+    <section>
+      <section>
+        <h2>Какво ще научите?</h2>
+        <ul>
+          <li>Разлика между разговорен и книжовен език</li>
+          <li>Ефективни стратегии за участие в дискусии</li>
+          <li>Практическо приложение чрез тестове</li>
+        </ul>
+      </section>
+      <section>
+        <h2>Резултати от тестовете:</h2>
+        <p>Общо решени тестове: {{ results|length }}</p>
+        <p>Среден резултат: {{ mean }}</p>
+        <p>Стандартно отклонение: {{ std_dev }}</p>
+        <p>Дисперсия: {{ variance }}</p>
+        <p>Медиана: {{ median }}</p>
+        <p>Мода: {{ mode }}</p>
+        <p>Максимум: {{ maximum }}</p>
+        <p>Минимум: {{ minimum }}</p>
+        <p>Обхват: {{ range_ }}</p>
+        <p>25-ти процентил: {{ percentile_25 }}</p>
+        <p>75-ти процентил: {{ percentile_75 }}</p>
+        <p>Интерквартилен обхват: {{ iqr }}</p>
+        <p>Скюност: {{ skewness }}</p>
+        <p>Куртоза: {{ kurtosis }}</p>
+        <p>95-ти процентил: {{ percentile_95 }}</p>
+        <p>99-ти процентил: {{ percentile_99 }}</p>
+        <p>90-ти процентил: {{ percentile_90 }}</p>
+        <img src="{% static 'images/test_results.png' %}" alt="Test Results Plot">
+        <img src="{% static 'images/histogram.png' %}" alt="Histogram Plot">
+        <img src="{% static 'images/boxplot.png' %}" alt="Boxplot Plot">
+    </section>
+    <section>
+      <h2>За кого е този сайт?</h2>
+      <p>Тази платформа е предназначена за ученици и студенти, които искат да подобрят уменията си по български език чрез практика и разбиране на теорията.</p>
+    </section>
+    <section>
+      <h2>Какво ще намерите тук?</h2>
+      <p>Тук ще намерите теоретични материали, интерактивни упражнения и ресурси за самообучение.</p>
+    </section>
+     
   </main>
 
   <footer>

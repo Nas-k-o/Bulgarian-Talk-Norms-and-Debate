@@ -5,12 +5,12 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #d4fc79, #96e6a1); /* Vibrant gradient background */
+    background: linear-gradient(135deg, #62cff4, #2c67f2); /* Vibrant gradient background */
     color: #333;
 }
 
 header {
-    background: linear-gradient(90deg, #005f73, #0a9396); /* Shiny gradient */
+    background: linear-gradient(90deg, #06c0e6, #14dee2); /* Shiny gradient */
     color: white;
     padding: 20px;
     text-align: center;
@@ -39,22 +39,22 @@ ul {
 
 li {
     padding: 5px 0;
-    color: #005f73; /* Teal for list items */
+    color: #005f73; 
 }
 
 footer {
     text-align: center;
     padding: 10px;
-    background: linear-gradient(90deg, #005f73, #0a9396); /* Matching shiny gradient */
+    background: linear-gradient(90deg, #06c0e6, #14dee2); 
     color: white;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Shadow for floating effect */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 
 .card {
     perspective: 1200px;
     width: 300px;
-    height: 220px;
+    height: 420px;
     margin: 10px;
 }
 

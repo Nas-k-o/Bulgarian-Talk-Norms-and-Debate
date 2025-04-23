@@ -1,9 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
+
 def calculate_test_results():
     # test data
-    results = [2,3,10,4,5,6,7,8,9,10]
+    results = [2, 3, 10, 4, 5, 6, 7, 8, 9, 10]
     df = pd.DataFrame(results, columns=['Results'])
     mean = df['Results'].mean()
     std_dev = df['Results'].std()
@@ -22,47 +23,74 @@ def calculate_test_results():
     percentile_99 = df['Results'].quantile(0.99)
     percentile_90 = df['Results'].quantile(0.90)
     percentile_10 = df['Results'].quantile(0.10)
-    return results
 
-def plot_results(results):
+    return {
+        'results': results,
+        'mean': mean,
+        'std_dev': std_dev,
+        'variance': variance,
+        'median': median,
+        'mode': mode,
+        'maximum': maximum,
+        'minimum': minimum,
+        'range_': range_,
+        'percentile_25': percentile_25,
+        'percentile_75': percentile_75,
+        'iqr': iqr,
+        'skewness': skewness,
+        'kurtosis': kurtosis,
+        'percentile_95': percentile_95,
+        'percentile_99': percentile_99,
+        'percentile_90': percentile_90,
+        'percentile_10': percentile_10,
+    }
+
+
+def Main():
+    stats = calculate_test_results()
+    results = stats['results']
+    print("Резултати от теста:", results)
+    print("Средно:", stats['mean'])
+    print("Стандартно отклонение:", stats['std_dev'])
+    print("Дисперсия:", stats['variance'])
+    print("Медиана:", stats['median'])
+    print("Мода:", stats['mode'])
+    print("Максимум:", stats['maximum'])
+    print("Минимум:", stats['minimum'])
+    print("Обхват:", stats['range_'])
+    print("25-ти процентил:", stats['percentile_25'])
+    print("75-ти процентил:", stats['percentile_75'])
+    print("Интерквартилен обхват:", stats['iqr'])
+    print("Скюност:", stats['skewness'])
+    print("Куртоза:", stats['kurtosis'])
+    print("95-ти процентил:", stats['percentile_95'])
+    print("99-ти процентил:", stats['percentile_99'])
+    print("90-ти процентил:", stats['percentile_90'])
+    print("10-ти процентил:", stats['percentile_10'])
+    save_plots(results)
+    print("Графиките са запазени в папка images")
+
+def save_plots(results):
     df = pd.DataFrame(results, columns=['Results'])
-    # Plot the results
     plt.plot(df['Results'])
     plt.title('Test Results')
     plt.xlabel('Test Number')
     plt.ylabel('Result')
-    plt.show()
-
+    plt.savefig('images/test_results.png')
+    plt.close()
+    
     plt.hist(df['Results'], bins=10, alpha=0.7, color='blue')  
     plt.title('Histogram of Test Results')
     plt.xlabel('Result')
     plt.ylabel('Frequency')
-    plt.show()
-
+    plt.savefig('images/histogram.png')
+    plt.close()
+    
     plt.boxplot(df['Results'])
     plt.title('Boxplot of Test Results')
     plt.ylabel('Result')
-    plt.show()
-
-def Main():
-    results = calculate_test_results()
-    plot_results(results)
-    df = pd.DataFrame(results, columns=['Results'])
-    print("Резултати от теста:", results)
-    print("Средно:", sum(results) / len(results))
-    print("Стандартно отклонение:", (sum((x - (sum(results) / len(results))) ** 2 for x in results) / len(results)) ** 0.5)
-    print("Дисперсия:", sum((x - (sum(results) / len(results))) ** 2 for x in results) / len(results))
-    print("Медиана:", sorted(results)[len(results) // 2])
-    print("Мода:", max(set(results), key=results.count))
-    print("Максимум:", max(results))
-    print("Минимум:", min(results))
-    print("Обхват:", max(results) - min(results))
-    print("25-ти процентил:", sorted(results)[int(0.25 * len(results))])
-    print("75-ти процентил:", sorted(results)[int(0.75 * len(results))])
-    print("Интерквартилен обхват:", sorted(results)[int(0.75 * len(results))] - sorted(results)[int(0.25 * len(results))])
-    print("Скюност:", (3 * (sum(results) / len(results) - sorted(results)[len(results) // 2])) / (sum((x - (sum(results) / len(results))) ** 2 for x in results) / len(results)) ** 0.5)
-    df = pd.DataFrame(results, columns=['Results'])
-
+    plt.savefig('images/boxplot.png')
+    plt.close()
 
 if __name__ == "__main__":
     Main()

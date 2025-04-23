@@ -13,7 +13,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--secondary-color);
+    background: linear-gradient(135deg, #62cff4, #2c67f2); 
     color: var(--text-color);
     line-height: 1.6;
     margin: 0;
@@ -194,11 +194,27 @@ h1, h2 {
 }
 
 #submitButton {
-    background-color: #4CAF50;
+    background-color: #4CAF50; /* Green background */
     color: white;
-    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    padding: 15px 30px; /* Consistent padding with start button */
+    font-size: 1.1em; /* Consistent font size */
+    font-weight: 600; /* Consistent font weight */
+    border-radius: 8px; /* Consistent border radius */
     cursor: pointer;
-    margin-top: 15px;
+    transition: background-color var(--transition-speed) ease, transform var(--transition-speed) ease, opacity var(--transition-speed) ease;
+    margin-top: 30px; /* Add some space above the button */
+    display: inline-block; /* Ensure it behaves like a block for margin/padding but flows inline */
+}
+
+#submitButton:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+#submitButton:disabled {
+    background-color: #aaa; /* Grey background when disabled */
+    cursor: not-allowed; /* Indicate it's not clickable */
+    transform: none; /* Remove hover transform */
+    opacity: 0.7; /* Slightly faded */
 }

@@ -1,6 +1,6 @@
 # Bulgarian Talk: Norms and Debate
 
-**Bulgarian Talk: Norms and Debate** is a web-based school project created with HTML, CSS, and JavaScript. It explores the principles of effective discussion and the correct use of standard Bulgarian language.
+**Bulgarian Talk: Norms and Debate** is a web-based school project created with HTML, CSS, and JavaScript. It explores the principles of effective discussion and the correct use of the standard Bulgarian language.
 
 ## 📚 Project Purpose
 
@@ -32,7 +32,7 @@ We aim to expand this platform by adding:
 
 ## 🌐 Live Demo
 
-Coming soon...
+https://nas-k-o.github.io/Bulgarian-Talk-Norms-and-Debate/
 
 ---
 

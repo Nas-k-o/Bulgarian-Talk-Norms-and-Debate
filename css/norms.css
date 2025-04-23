@@ -33,12 +33,18 @@ body {
     max-width: 800px;
     width: 100%;
     text-align: center; 
+    padding-top: 0; /* Remove top padding if nav handles it */
 }
 
 h1, h2 {
     color: var(--primary-color);
     margin-bottom: 30px;
     font-weight: 600;
+}
+
+h1 {
+    margin-top: 0; /* Reset top margin if container padding handles spacing */
+    margin-bottom: 35px; /* Match nav margin-bottom */
 }
 
 #startButton {
@@ -218,3 +224,155 @@ h1, h2 {
     transform: none; /* Remove hover transform */
     opacity: 0.7; /* Slightly faded */
 }
+/* --- Navigation Styles --- */
+.main-nav {
+    background-color: #fff; /* Change background to white */
+    border-radius: 8px; /* Apply border-radius to all corners */
+    margin-bottom: 35px; /* Increase space below nav */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Slightly stronger shadow */
+    padding: 0.75rem 0; /* Increase vertical padding */
+    /* Removed negative margins - let it sit naturally within container padding */
+    text-align: center;
+    position: relative; /* Optional: for potential pseudo-elements */
+    overflow: hidden; /* Ensure nothing spills out */
+  }
+  
+  .main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+  }
+  
+  .main-nav li {
+    display: inline-block;
+    margin: 0 5px; /* Reduce margin between items slightly */
+  }
+  
+  .main-nav a {
+    color: var(--primary-color); /* Use primary color for text */
+    text-decoration: none;
+    font-weight: 500; /* Slightly bolder */
+    padding: 10px 18px; /* Increase padding */
+    border-radius: 6px; /* Slightly larger radius */
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, transform 0.2s ease;
+    display: inline-block; /* Needed for transform */
+    position: relative; /* For potential underline effect */
+  }
+  
+  .main-nav a:hover,
+  .main-nav a:focus {
+    background-color: var(--hover-bg); /* Use hover background variable */
+    color: var(--primary-color); /* Keep text color */
+    transform: translateY(-1px); /* Subtle lift on hover */
+    outline: none;
+  }
+  
+  /* Optional: Add an active state indicator (if you add an 'active' class via JS or manually) */
+  /*
+  .main-nav a.active {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+  }
+  */
+  
+  /* Adjust container padding-top if nav is inside */
+  .container {
+    /* ... existing container styles ... */
+    padding: 30px 40px; /* Restore default padding */
+    /* The nav will now respect this padding */
+  }
+  
+  /* Adjust h1 margin if needed */
+  h1 {
+     /* ... existing h1 styles ... */
+     margin-top: 0; /* Reset top margin if container padding handles spacing */
+     /* Or adjust if more space is needed below nav */
+     margin-bottom: 35px; /* Match nav margin-bottom */
+  }
+
+/* --- Quiz Selection Page Styles --- */
+.quiz-selection {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-around; /* Distribute space between cards */
+    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+    gap: 25px; /* Space between cards */
+    margin-top: 40px; /* Space below the heading */
+    text-align: left; /* Reset text align from container */
+}
+
+.quiz-card {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 25px;
+    width: calc(33.333% - 40px); /* Aim for 3 cards per row, adjusting for gap and padding */
+    min-width: 220px; /* Minimum width before wrapping */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.07);
+    text-decoration: none; /* Remove underline from link */
+    color: var(--text-color); /* Inherit text color */
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    display: flex; /* Use flex to help center content if needed */
+    flex-direction: column; /* Stack content vertically */
+    justify-content: space-between; /* Push content apart */
+}
+
+.quiz-card:hover {
+    transform: translateY(-5px); /* Lift card on hover */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* Increase shadow on hover */
+}
+
+.quiz-card h2 {
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 15px;
+    color: var(--primary-color); /* Use primary color for heading */
+    font-size: 1.5em;
+}
+
+.quiz-card p {
+    margin-bottom: 0; /* Remove default bottom margin */
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #555; /* Slightly lighter text color for description */
+}
+
+/* Optional: Add specific background hints or borders */
+.quiz-card.easy {
+    border-left: 5px solid #6fcf97; /* Green accent for easy */
+}
+.quiz-card.medium {
+    border-left: 5px solid #f2c94c; /* Yellow accent for medium */
+}
+.quiz-card.hard {
+    border-left: 5px solid #eb5757; /* Red accent for hard */
+}
+
+/* --- Navigation Active State --- */
+.main-nav a.active {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+.main-nav a.active:hover {
+     background-color: #357abd; /* Slightly darker primary on hover for active link */
+}
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .quiz-card {
+        width: calc(50% - 35px); /* Two cards per row */
+    }
+}
+
+@media (max-width: 500px) {
+    .quiz-card {
+        width: 100%; /* One card per row */
+        min-width: unset;
+    }
+    .quiz-selection {
+        gap: 15px; /* Reduce gap */
+    }
+}
+

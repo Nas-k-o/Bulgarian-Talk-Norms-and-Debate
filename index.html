@@ -8,68 +8,69 @@
   <link rel="stylesheet" href="css/nav.css" />
 </head>
 <body>
-  <header>
-    <h1>БЪЛГАРСКО СЛОВО: Норми и Дебати</h1>
-    <nav class="main-nav">
+  <div class="page-container"> <!-- Added wrapper div -->
+    <header>
+      <h1>БЪЛГАРСКО СЛОВО: Норми и Дебати</h1>
+      <nav class="main-nav">
+          <ul>
+              <li><a href="index.html" class="active">Начало</a></li> <!-- Added active class here -->
+              <li><a href="theory.html">Теория</a></li>
+              <li><a href="quizzes.html">Упражнения</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section>
+        <h2>Добре дошли!</h2> <!-- Changed H1 to H2 and updated text -->
+        <p>Образователна платформа за изучаване на норми на българския език и водене на ефективни дискусии.</p>
+      </section>
+      <section>
+        <h2>Какво ще научите?</h2>
         <ul>
-            <li><a href="index.html" class="active">Начало</a></li> <!-- Added active class here -->
-            <li><a href="theory.html">Теория</a></li>
-            <li><a href="quizzes.html">Упражнения</a></li>
+          <li>Разлика между разговорен и книжовен език</li>
+          <li>Ефективни стратегии за участие в дискусии</li>
+          <li>Практическо приложение чрез тестове</li>
         </ul>
-    </nav>
-  </header>
+      </section>
+      <section>
+        <h2>Резултати от тестовете:</h2>
+        <p>Общо решени тестове: {{ results|length }}</p>
+        <p>Среден резултат: {{ mean }}</p>
+        <p>Стандартно отклонение: {{ std_dev }}</p>
+        <p>Дисперсия: {{ variance }}</p>
+        <p>Медиана: {{ median }}</p>
+        <p>Мода: {{ mode }}</p>
+        <p>Максимум: {{ maximum }}</p>
+        <p>Минимум: {{ minimum }}</p>
+        <p>Обхват: {{ range_ }}</p>
+        <p>25-ти процентил: {{ percentile_25 }}</p>
+        <p>75-ти процентил: {{ percentile_75 }}</p>
+        <p>Интерквартилен обхват: {{ iqr }}</p>
+        <p>Скюност: {{ skewness }}</p>
+        <p>Куртоза: {{ kurtosis }}</p>
+        <p>95-ти процентил: {{ percentile_95 }}</p>
+        <p>99-ти процентил: {{ percentile_99 }}</p>
+        <p>90-ти процентил: {{ percentile_90 }}</p>
+        <img src="images/test_results.png" alt="Test Results Plot">
+        <img src="images/histogram.png" alt="Histogram Plot">
+        <img src="images/boxplot.png" alt="Boxplot Plot">
+      </section>
+      <section>
+        <h2>За кого е този сайт?</h2>
+        <p>Тази платформа е предназначена за ученици и студенти, които искат да подобрят уменията си по български език чрез практика и разбиране на теорията.</p>
+      </section>
+      <section>
+        <h2>Какво ще намерите тук?</h2>
+        <p>Тук ще намерите теоретични материали, интерактивни упражнения и ресурси за самообучение.</p>
+      </section>
+    </main>
 
-  <main>
-    <section>
-      <h2>Добре дошли!</h2> <!-- Changed H1 to H2 and updated text -->
-      <p>Образователна платформа за изучаване на норми на българския език и водене на ефективни дискусии.</p>
-    </section>
-    <section>
-      <h2>Какво ще научите?</h2>
-      <ul>
-        <li>Разлика между разговорен и книжовен език</li>
-        <li>Ефективни стратегии за участие в дискусии</li>
-        <li>Практическо приложение чрез тестове</li>
-      </ul>
-    </section>
-    <section>
-      <h2>Резултати от тестовете:</h2>
-      <p>Общо решени тестове: {{ results|length }}</p>
-      <p>Среден резултат: {{ mean }}</p>
-      <p>Стандартно отклонение: {{ std_dev }}</p>
-      <p>Дисперсия: {{ variance }}</p>
-      <p>Медиана: {{ median }}</p>
-      <p>Мода: {{ mode }}</p>
-      <p>Максимум: {{ maximum }}</p>
-      <p>Минимум: {{ minimum }}</p>
-      <p>Обхват: {{ range_ }}</p>
-      <p>25-ти процентил: {{ percentile_25 }}</p>
-      <p>75-ти процентил: {{ percentile_75 }}</p>
-      <p>Интерквартилен обхват: {{ iqr }}</p>
-      <p>Скюност: {{ skewness }}</p>
-      <p>Куртоза: {{ kurtosis }}</p>
-      <p>95-ти процентил: {{ percentile_95 }}</p>
-      <p>99-ти процентил: {{ percentile_99 }}</p>
-      <p>90-ти процентил: {{ percentile_90 }}</p>
-      <img src="images/test_results.png" alt="Test Results Plot">
-      <img src="images/histogram.png" alt="Histogram Plot">
-      <img src="images/boxplot.png" alt="Boxplot Plot">
-    </section>
-    <section>
-      <h2>За кого е този сайт?</h2>
-      <p>Тази платформа е предназначена за ученици и студенти, които искат да подобрят уменията си по български език чрез практика и разбиране на теорията.</p>
-    </section>
-    <section>
-      <h2>Какво ще намерите тук?</h2>
-      <p>Тук ще намерите теоретични материали, интерактивни упражнения и ресурси за самообучение.</p>
-    </section>
-     
-  </main>
-
-  <footer>
-    <a href="https://github.com/Nas-k-o/Bulgarian-Talk-Norms-and-Debate" target="_blank" rel="noopener noreferrer">
-      <p>&copy; 2025 Българско Слово: Норми и Дебати.</p>
-    </a>
-  </footer>
+    <footer>
+      <a href="https://github.com/Nas-k-o/Bulgarian-Talk-Norms-and-Debate" target="_blank" rel="noopener noreferrer">
+        <p>&copy; 2025 Българско Слово: Норми и Дебати.</p>
+      </a>
+    </footer>
+  </div> <!-- Closed wrapper div -->
 </body>
 </html>

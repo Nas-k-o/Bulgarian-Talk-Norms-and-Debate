@@ -21,42 +21,39 @@
 
   <main>
     <section>
-      <h1>БЪЛГАРСКО СЛОВО: Норми и Дебати</h1>
+      <h2>Добре дошли!</h2> <!-- Changed H1 to H2 and updated text -->
       <p>Образователна платформа за изучаване на норми на българския език и водене на ефективни дискусии.</p>
-      интерактивни въпроси.</p>
-
     </section>
     <section>
-      <section>
-        <h2>Какво ще научите?</h2>
-        <ul>
-          <li>Разлика между разговорен и книжовен език</li>
-          <li>Ефективни стратегии за участие в дискусии</li>
-          <li>Практическо приложение чрез тестове</li>
-        </ul>
-      </section>
-      <section>
-        <h2>Резултати от тестовете:</h2>
-        <p>Общо решени тестове: {{ results|length }}</p>
-        <p>Среден резултат: {{ mean }}</p>
-        <p>Стандартно отклонение: {{ std_dev }}</p>
-        <p>Дисперсия: {{ variance }}</p>
-        <p>Медиана: {{ median }}</p>
-        <p>Мода: {{ mode }}</p>
-        <p>Максимум: {{ maximum }}</p>
-        <p>Минимум: {{ minimum }}</p>
-        <p>Обхват: {{ range_ }}</p>
-        <p>25-ти процентил: {{ percentile_25 }}</p>
-        <p>75-ти процентил: {{ percentile_75 }}</p>
-        <p>Интерквартилен обхват: {{ iqr }}</p>
-        <p>Скюност: {{ skewness }}</p>
-        <p>Куртоза: {{ kurtosis }}</p>
-        <p>95-ти процентил: {{ percentile_95 }}</p>
-        <p>99-ти процентил: {{ percentile_99 }}</p>
-        <p>90-ти процентил: {{ percentile_90 }}</p>
-        <img src="{% static 'images/test_results.png' %}" alt="Test Results Plot">
-        <img src="{% static 'images/histogram.png' %}" alt="Histogram Plot">
-        <img src="{% static 'images/boxplot.png' %}" alt="Boxplot Plot">
+      <h2>Какво ще научите?</h2>
+      <ul>
+        <li>Разлика между разговорен и книжовен език</li>
+        <li>Ефективни стратегии за участие в дискусии</li>
+        <li>Практическо приложение чрез тестове</li>
+      </ul>
+    </section>
+    <section>
+      <h2>Резултати от тестовете:</h2>
+      <p>Общо решени тестове: {{ results|length }}</p>
+      <p>Среден резултат: {{ mean }}</p>
+      <p>Стандартно отклонение: {{ std_dev }}</p>
+      <p>Дисперсия: {{ variance }}</p>
+      <p>Медиана: {{ median }}</p>
+      <p>Мода: {{ mode }}</p>
+      <p>Максимум: {{ maximum }}</p>
+      <p>Минимум: {{ minimum }}</p>
+      <p>Обхват: {{ range_ }}</p>
+      <p>25-ти процентил: {{ percentile_25 }}</p>
+      <p>75-ти процентил: {{ percentile_75 }}</p>
+      <p>Интерквартилен обхват: {{ iqr }}</p>
+      <p>Скюност: {{ skewness }}</p>
+      <p>Куртоза: {{ kurtosis }}</p>
+      <p>95-ти процентил: {{ percentile_95 }}</p>
+      <p>99-ти процентил: {{ percentile_99 }}</p>
+      <p>90-ти процентил: {{ percentile_90 }}</p>
+      <img src="images/test_results.png" alt="Test Results Plot">
+      <img src="images/histogram.png" alt="Histogram Plot">
+      <img src="images/boxplot.png" alt="Boxplot Plot">
     </section>
     <section>
       <h2>За кого е този сайт?</h2>

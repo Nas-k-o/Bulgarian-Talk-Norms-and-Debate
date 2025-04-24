@@ -52,6 +52,7 @@ section h2 { /* Specific styles for section headings */
 }
 
 p { /* General paragraph styles */
+    text-align: center; /* Left align paragraphs for readability */
     color: #333; /* Standard dark grey for text */
     margin-bottom: 15px; /* Consistent bottom margin */
     padding: 0 10px; /* Add slight horizontal padding */

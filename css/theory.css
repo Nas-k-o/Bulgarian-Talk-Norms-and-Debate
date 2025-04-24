@@ -32,15 +32,6 @@ h2 {
     text-align: center;
 }
 
-ul {
-    list-style-type: none;
-    padding-left: 20px;
-}
-
-li {
-    padding: 5px 0;
-    color: #005f73; 
-}
 
 footer {
     text-align: center;
@@ -49,7 +40,6 @@ footer {
     color: white;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); 
 }
-
 
 .card {
     perspective: 1200px;

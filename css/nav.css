@@ -1,0 +1,67 @@
+:root {
+    /* Define these in your main CSS file (e.g., norms.css or styles.css) */
+
+    --primary-color: #4a90e2;   /* Example value (adjust as needed) */
+    --hover-bg: #e0eaf6;       /* Example value (adjust as needed) */
+    --transition-speed: 0.4s;  /* Example value (adjust as needed) */
+
+    /* Optional: Define a darker primary color for hover states */
+    /* --primary-color-dark: #357abd; */
+}
+
+/* --- Navigation Styles --- */
+.main-nav {
+    background-color: #fff; /* Change background to white */
+    border-radius: 8px; /* Apply border-radius to all corners */
+    margin-bottom: 35px; /* Increase space below nav */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Slightly stronger shadow */
+    padding: 0.75rem 0; /* Increase vertical padding */
+    text-align: center;
+    position: relative; /* Optional: for potential pseudo-elements */
+    overflow: hidden; /* Ensure nothing spills out */
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin: 0 5px; /* Reduce margin between items slightly */
+}
+
+.main-nav a {
+    /* Reference variables defined in norms.css or styles.css */
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500; /* Slightly bolder */
+    padding: 10px 18px; /* Increase padding */
+    border-radius: 6px; /* Slightly larger radius */
+    transition: background-color var(--transition-speed, 0.4s) ease, color var(--transition-speed, 0.4s) ease, transform 0.2s ease;
+    display: inline-block; /* Needed for transform */
+    position: relative; /* For potential underline effect */
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+    /* Reference variables defined in norms.css or styles.css */
+    background-color: var(--hover-bg);
+    color: var(--primary-color); /* Keep text color */
+    transform: translateY(-1px); /* Subtle lift on hover */
+    outline: none;
+}
+
+/* --- Navigation Active State --- */
+.main-nav a.active {
+    /* Reference variables defined in norms.css or styles.css */
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+}
+.main-nav a.active:hover {
+     background-color: #357abd; /* Slightly darker primary on hover for active link */
+     /* Consider using a variable if you define a darker primary color */
+}

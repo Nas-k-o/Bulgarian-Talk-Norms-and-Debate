@@ -12,6 +12,15 @@ body {
     color: #333; /* Default text color */
     line-height: 1.6;
     min-height: 100vh;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack children vertically */
+}
+
+.page-container { /* Style the new container */
+    display: flex;
+    flex-direction: column;
+    flex: 1; /* Allow container to grow if needed, useful if body has other direct children */
+    width: 100%; /* Ensure container takes full width */
 }
 
 header h1 {
@@ -25,11 +34,17 @@ header h1 {
 }
 
 main {
-    max-width: 1200px;
-    margin: 40px auto;
-    padding: 0 20px;
-    display: grid;
+    padding: 0 20px; /* Keep padding */
+    display: flex; /* Changed from grid to flex */
+    flex-wrap: wrap; /* Allow items to wrap */
+    flex-direction: column;
     gap: 30px; /* Consistent gap */
+    /* Removed grid-template-columns */
+    flex: 1; /* Make main content area grow to push footer down */
+    width: 100%; /* Ensure main takes full width within container */
+    max-width: 1200px; /* Re-apply max-width */
+    margin: 40px auto; /* Re-apply margin auto for horizontal centering */
+    justify-content: center; /* Center flex items */
 }
 
 section {
@@ -37,6 +52,21 @@ section {
     padding: 25px; /* Increased padding */
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    min-width: 300px; /* Ensure minimum width before wrapping */
+    /* align-items: center; Removed, default stretch is usually better */
+    display: flex; /* Use flex for internal alignment if needed */
+    flex-direction: column; /* Stack content vertically within section */
+    align-items: center; /* Center content horizontally within section */
+}
+
+/* Style for images within sections to make them responsive */
+section img {
+    max-width: 100%; /* Ensure images don't overflow their container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Remove extra space below image */
+    margin: 15px auto; /* Center images and add some margin */
+    border-radius: 8px; /* Optional: add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add shadow */
 }
 
 h1, h2 { /* General heading styles */
@@ -52,7 +82,7 @@ section h2 { /* Specific styles for section headings */
 }
 
 p { /* General paragraph styles */
-    text-align: center; /* Left align paragraphs for readability */
+    text-align: center; /* Center align paragraphs */
     color: #333; /* Standard dark grey for text */
     margin-bottom: 15px; /* Consistent bottom margin */
     padding: 0 10px; /* Add slight horizontal padding */
@@ -60,7 +90,8 @@ p { /* General paragraph styles */
 
 section p { /* Specific styles for paragraphs within sections */
     color: #005f73; /* Match section heading color */
-    text-align: center; /* Center align text within sections if preferred, or keep left */
+    text-align: center; /* Center align text within sections */
+    width: 100%; /* Ensure paragraphs take full width for centering */
 }
 
 /* Style for lists within sections */
@@ -68,6 +99,10 @@ section ul {
     list-style: disc; /* Use standard disc bullets */
     margin-left: 40px; /* Indent list */
     margin-bottom: 15px; /* Add space below list */
+    padding-left: 0; /* Reset padding */
+    text-align: left; /* Align list items left */
+    width: fit-content; /* Adjust width to content */
+    margin: 15px auto; /* Center the list block */
 }
 
 section li {
@@ -75,5 +110,77 @@ section li {
     margin-bottom: 8px; /* Space between list items */
 }
 
-/* Footer styles removed - moved to nav.css */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem; /* Smaller font size for header */
+        padding: 15px 0;
+    }
+
+    main {
+        margin: 20px auto; /* Adjust margin for smaller screens */
+        padding: 0 15px; /* Adjust padding */
+        gap: 20px; /* Adjust gap */
+    }
+    section {
+        padding: 20px; /* Reduce padding */
+        /* On smaller screens, make sections take full width */
+        flex: 1 1 100%;
+        min-width: unset; /* Remove min-width constraint */
+    }
+
+    h1, h2 {
+        font-size: 1.6rem; /* Adjust heading size */
+        margin-bottom: 15px;
+    }
+
+    section h2 {
+        font-size: 1.5rem; /* Adjust section heading size */
+    }
+
+    p {
+        font-size: 0.95rem; /* Slightly smaller text */
+        padding: 0 5px; /* Adjust padding */
+    }
+
+    section ul {
+        margin-left: 25px; /* Reduce list indentation */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem; /* Even smaller font size */
+    }
+
+    main {
+        margin: 15px auto; /* Further adjust margin */
+        padding: 0 10px; /* Further adjust padding */
+    }
+    section {
+        padding: 15px; /* Further reduce padding */
+        border-radius: 10px; /* Slightly smaller border radius */
+    }
+
+    h1, h2 {
+        font-size: 1.4rem; /* Adjust heading size */
+    }
+
+    section h2 {
+        font-size: 1.3rem; /* Adjust section heading size */
+    }
+
+    p {
+        font-size: 0.9rem; /* Adjust paragraph font size */
+        margin-bottom: 10px;
+    }
+
+    section ul {
+        margin-left: 20px; /* Further reduce list indentation */
+    }
+
+    section li {
+        margin-bottom: 6px; /* Reduce space between list items */
+    }
+}
 

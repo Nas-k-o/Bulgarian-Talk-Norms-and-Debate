@@ -52,7 +52,7 @@ section h2 { /* Specific styles for section headings */
 }
 
 p { /* General paragraph styles */
-    text-align: left; /* Left align paragraphs for readability */
+    text-align: center; /* Left align paragraphs for readability */
     color: #333; /* Standard dark grey for text */
     margin-bottom: 15px; /* Consistent bottom margin */
     padding: 0 10px; /* Add slight horizontal padding */
@@ -75,13 +75,5 @@ section li {
     margin-bottom: 8px; /* Space between list items */
 }
 
-footer {
-    text-align: center;
-    padding: 20px; /* Increased padding */
-    background: linear-gradient(90deg, #06c0e6, #14dee2);
-    color: white;
-    margin-top: 60px;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
-    font-size: 0.9rem; /* Slightly smaller font size */
-}
+/* Footer styles removed - moved to nav.css */
 

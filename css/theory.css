@@ -9,13 +9,7 @@ body {
     color: #333;
 }
 
-header {
-    background: linear-gradient(90deg, #06c0e6, #14dee2); /* Shiny gradient */
-    color: white;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-}
+
 
 main {
     display: flex;
@@ -33,13 +27,7 @@ h2 {
     margin-bottom: 15px; /* Added margin for spacing */
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background: linear-gradient(90deg, #06c0e6, #14dee2); 
-    color: white;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); 
-}
+/* Footer styles removed - moved to nav.css */
 
 .card {
     perspective: 1200px;

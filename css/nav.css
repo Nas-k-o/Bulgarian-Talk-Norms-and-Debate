@@ -9,6 +9,13 @@
     /* --primary-color-dark: #357abd; */
 }
 
+header {
+    background: linear-gradient(90deg, #06c0e6, #14dee2); /* Shiny gradient */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
 /* --- Navigation Styles --- */
 .main-nav {
     background-color: #fff; /* Change background to white */
@@ -64,4 +71,36 @@
 .main-nav a.active:hover {
      background-color: #357abd; /* Slightly darker primary on hover for active link */
      /* Consider using a variable if you define a darker primary color */
+}
+
+/* Footer Styles */
+footer {
+    background: linear-gradient(90deg, #06c0e6, #14dee2); /* Consistent gradient */
+    color: white; /* Consistent text color */
+    margin-top: auto; /* Consistent top margin */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Consistent shadow */
+    width: 100%; /* Ensure footer spans full width */
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    display: inline-block; /* Make the link fill the footer */
+    color: inherit; /* Inherit text color from footer */
+    text-decoration: none; /* Remove underline */
+    transition: text-shadow 0.3s ease; /* Smooth transition for text glow only */
+
+}
+
+footer a:hover,
+footer a:focus {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* White text glow on hover/focus */
+    text-decoration: underline;
+    outline: none; /* Remove focus outline if desired */
+}
+
+footer p {
+    font-size: 1.1em;
+    margin: 0; /* Remove default paragraph margin */
+    color:white
 }

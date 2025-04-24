@@ -30,8 +30,8 @@ h2 {
     color: #0a9396; /* Vibrant teal */
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Shiny text effect */
     text-align: center;
+    margin-bottom: 15px; /* Added margin for spacing */
 }
-
 
 footer {
     text-align: center;
@@ -69,14 +69,30 @@ footer {
     border-radius: 12px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
     background: linear-gradient(135deg, #ffffff, #e0f7fa);
-    padding: 15px;
+    padding: 20px; /* Slightly increased padding */
     display: flex;
     flex-direction: column;
     justify-content: center;
+    box-sizing: border-box; /* Include padding in width/height calculation */
+}
+
+.card-front p, .card-back p {
+    margin-bottom: 10px; /* Consistent spacing below paragraphs */
+    font-size: 0.95em; /* Slightly adjust font size for consistency */
+    line-height: 1.5; /* Adjust line height for readability */
+}
+
+.card-front p:last-child, .card-back p:last-child {
+    margin-bottom: 0; /* Remove margin from the last paragraph */
+}
+
+.card-front p strong, .card-back p strong {
+    color: #0077b6; /* Consistent color for emphasis */
+    font-weight: 600; /* Slightly bolder */
 }
 
 .card-back {
     background: linear-gradient(135deg, #e0f7fa, #b2f7ef);
     transform: rotateY(180deg);
-    
+    /* Removed justify-content as it's inherited or set above */
 }

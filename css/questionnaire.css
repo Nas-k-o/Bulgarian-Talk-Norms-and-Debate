@@ -100,29 +100,43 @@ h1 {
     font-weight: 600;
 }
 
+/* Style the div wrapping input/label pairs */
+.question-container div:has(> input[type="radio"]) {
+    margin-bottom: 12px; /* Spacing between options */
+    position: relative; /* Needed for positioning the pseudo-element */
+}
+
 .question-container label {
-    display: block; 
-    margin-bottom: 12px;
-    padding: 10px 15px;
+    display: inline-block; /* Change to inline-block */
+    padding: 10px 15px 10px 30px; /* Adjust padding: top, right, bottom, left */
     border-radius: 6px;
     cursor: pointer;
-    transition: background-color var(--transition-speed) ease;
-    position: relative; 
-    padding-left: 40px; 
-    border: 1px solid transparent; 
+    transition: background-color var(--transition-speed) ease, color var(--transition-speed) ease, border-color var(--transition-speed) ease;
+    border: 1px solid var(--border-color);
+    width: calc(100% - 40px); /* Adjust width if needed, considering the input */
+    vertical-align: middle; /* Align label text with custom radio */
+    margin-left: 10px; /* Space between custom radio and label text */
 }
 
 .question-container label:hover {
     background-color: var(--hover-bg);
+    border-color: #c0d9f0; /* Slightly darker border on hover */
 }
 
 .question-container input[type="radio"] {
     opacity: 0;
     position: absolute;
-    left: -9999px;
+    left: 10px; /* Position hidden radio near the custom one */
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0;
+    width: 18px; /* Match custom radio size */
+    height: 18px; /* Match custom radio size */
+    cursor: pointer; /* Make the area clickable */
 }
 
-.question-container label::before {
+/* Custom radio button style using ::before on the LABEL's PARENT DIV */
+.question-container div:has(> input[type="radio"])::before {
     content: '';
     position: absolute;
     left: 10px;
@@ -133,41 +147,54 @@ h1 {
     border: 2px solid var(--border-color);
     border-radius: 50%;
     background-color: #fff;
-    transition: border-color var(--transition-speed) ease;
+    transition: border-color var(--transition-speed) ease, background-color var(--transition-speed) ease; /* Added background-color transition */
+    pointer-events: none; /* Prevent interfering with clicks */
 }
 
-.question-container input[type="radio"]:checked + label::before {
+/* Style for the custom radio button when checked */
+.question-container input[type="radio"]:checked + label {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
     border-color: var(--primary-color);
-    background-color: var(--primary-color); 
 }
 
-.question-container input[type="radio"]:checked + label::after {
+/* Corrected rule: Style the PARENT DIV's ::before when its child input is checked */
+.question-container div:has(> input[type="radio"]:checked)::before {
+    border-color: var(--primary-color);
+    background-color: var(--primary-color);
+}
+
+/* Style for the inner dot using ::after on the LABEL's PARENT DIV */
+.question-container div:has(> input[type="radio"])::after {
     content: '';
     position: absolute;
-    left: 15px; 
+    left: 15px; /* Adjust position based on ::before */
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%) scale(0); /* Start scaled down */
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: #fff; 
+    background-color: #fff;
+    transition: transform var(--transition-speed) ease;
+    pointer-events: none; /* Prevent interfering with clicks */
 }
 
-.question-container input[type="radio"]:checked + label {
-    background-color: var(--hover-bg); 
-    font-weight: 600; 
+/* Show the inner dot when checked */
+.question-container div:has(> input[type="radio"]:checked)::after {
+    transform: translate(-50%, -50%) scale(1); /* Scale up when checked */
 }
-
 
 .question-container input[type="radio"]:focus + label {
      outline: 2px dashed var(--primary-color);
      outline-offset: 2px;
 }
-.question-container input[type="radio"]:focus-visible + label::before {
+
+/* Corrected focus style for custom radio */
+.question-container div:has(> input[type="radio"]:focus-visible)::before {
      border-color: var(--primary-color);
      box-shadow: 0 0 0 2px var(--hover-bg);
 }
-
 
 .explanation {
     margin-top: 15px;
@@ -269,14 +296,6 @@ h1 {
     outline: none;
   }
   
-  /* Optional: Add an active state indicator (if you add an 'active' class via JS or manually) */
-  /*
-  .main-nav a.active {
-    background-color: var(--primary-color);
-    color: white;
-    font-weight: 600;
-  }
-  */
   
   /* Adjust container padding-top if nav is inside */
   .container {

@@ -41,31 +41,12 @@ if (levelHeading) { // Check if heading exists
 
 const correctAnswers = allCorrectAnswers[currentLevel]; // Select the answers for the current level
 
+const explanations = document.querySelectorAll('.explanation'); // Get all explanation divs
+
 // --- Event Listeners ---
 startButton.addEventListener('click', () => {
     questionnaireArea.classList.add('visible');
     startButton.style.display = 'none';
-});
-
-questions.forEach((question) => {
-    const radios = question.querySelectorAll('input[type="radio"]');
-    const explanation = question.querySelector('.explanation');
-
-    radios.forEach(radio => {
-        radio.addEventListener('change', () => {
-            const groupName = radio.name;
-            // Hide explanations for other questions in the same group first
-            question.parentElement.querySelectorAll(`.explanation.visible`).forEach(expl => {
-                 const explIdNum = expl.id.replace('explanation', '');
-                 const radioNum = groupName.replace('q','');
-                 if (explIdNum === radioNum && expl !== explanation) {
-                    expl.classList.remove('visible');
-                 }
-            });
-            // Show explanation for the current question
-            explanation.classList.add('visible');
-        });
-    });
 });
 
 
@@ -111,6 +92,11 @@ quizForm.addEventListener('submit', (event) => {
              questionContainer.style.borderColor = 'orange';
         }
     }
+
+    // Make all explanations visible upon submission
+    explanations.forEach(explanation => {
+        explanation.classList.add('visible');
+    });
 
     // Display the results
     let levelText = '';

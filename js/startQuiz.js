@@ -5,6 +5,9 @@ const quizForm = document.getElementById('quizForm');
 const resultsArea = document.getElementById('results-area');
 const submitButton = document.getElementById('submitButton');
 const levelHeading = document.querySelector('.container h2'); // Get the H2 element for level detection
+const usernameInput = document.getElementById('username'); // Get the username input
+const usernameContainer = document.querySelector('.username-container'); // Get the username container
+const explanations = document.querySelectorAll('.explanation'); // Get all explanation divs
 
 // --- Store all answer sets ---
 const allCorrectAnswers = {
@@ -43,31 +46,24 @@ const correctAnswers = allCorrectAnswers[currentLevel]; // Select the answers fo
 
 // --- Event Listeners ---
 startButton.addEventListener('click', () => {
-    questionnaireArea.classList.add('visible');
-    startButton.style.display = 'none';
+    const username = usernameInput.value.trim(); // Get and trim the username
+
+    if (username === '') {
+        // Optionally, provide visual feedback instead of just an alert
+        alert('Моля, въведете име, за да започнете.');
+        usernameInput.style.borderColor = 'red'; // Highlight the input field
+        usernameInput.focus(); // Set focus to the input field
+    } else {
+        // Username is entered, proceed to start the quiz
+        usernameInput.style.borderColor = 'var(--border-color)'; // Reset border color if previously red
+        questionnaireArea.classList.add('visible');
+        startButton.style.display = 'none';
+        if (usernameContainer) { // Hide the username input area as well
+            usernameContainer.style.display = 'none';
+        }
+        console.log(`Quiz started by: ${username}`); // Log username
+    }
 });
-
-questions.forEach((question) => {
-    const radios = question.querySelectorAll('input[type="radio"]');
-    const explanation = question.querySelector('.explanation');
-
-    radios.forEach(radio => {
-        radio.addEventListener('change', () => {
-            const groupName = radio.name;
-            // Hide explanations for other questions in the same group first
-            question.parentElement.querySelectorAll(`.explanation.visible`).forEach(expl => {
-                 const explIdNum = expl.id.replace('explanation', '');
-                 const radioNum = groupName.replace('q','');
-                 if (explIdNum === radioNum && expl !== explanation) {
-                    expl.classList.remove('visible');
-                 }
-            });
-            // Show explanation for the current question
-            explanation.classList.add('visible');
-        });
-    });
-});
-
 
 // --- Form Submission Logic ---
 quizForm.addEventListener('submit', (event) => {
@@ -112,12 +108,18 @@ quizForm.addEventListener('submit', (event) => {
         }
     }
 
+    // Make all explanations visible upon submission
+    explanations.forEach(explanation => {
+        explanation.classList.add('visible');
+    });
+
     // Display the results
     let levelText = '';
     if (currentLevel !== 'easy') {
         levelText = ` (${currentLevel.charAt(0).toUpperCase() + currentLevel.slice(1)} ниво)`;
     }
-    resultsArea.textContent = `Вашият резултат${levelText}: ${score} от ${totalQuestions}`;
+    const username = usernameInput.value.trim(); // Get username again for results
+    resultsArea.textContent = `${username}, вашият резултат${levelText}: ${score} от ${totalQuestions}`; // Include username in results
     resultsArea.style.color = score >= totalQuestions / 2 ? 'green' : 'red';
 
     // Disable inputs
@@ -127,5 +129,5 @@ quizForm.addEventListener('submit', (event) => {
         radio.disabled = true;
     });
 
-    console.log(`Quiz submitted (${currentLevel}). Score: ${score}/${totalQuestions}`);
+    console.log(`Quiz submitted (${currentLevel}) by ${username}. Score: ${score}/${totalQuestions}`);
 });

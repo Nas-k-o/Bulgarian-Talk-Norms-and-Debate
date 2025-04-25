@@ -22,6 +22,10 @@
     <h1>Обобщителни упражнения върху книжовните норми</h1>
     <h2>Ниво: Лесно</h2>
 
+    <div class="username-container"> <!-- Added username input container -->
+        <label for="username">Въведете име:</label>
+        <input type="text" id="username" name="username" required>
+    </div>
 
     <button id="startButton">Започни упражнението</button>
 
@@ -30,18 +34,22 @@
 
             <div class="question-container">
                 <p><strong>1. Кое изписване е правилно?</strong></p>
-                <label>
-                    <input type="radio" name="q1" value="a"> Пясък
-                </label>
-                <label>
-                    <input type="radio" name="q1" value="b"> Пясюк
-                </label>
-                <label>
-                    <input type="radio" name="q1" value="c"> Песък
-                </label>
-                <label>
-                    <input type="radio" name="q1" value="d"> Пясек
-                </label>
+                <div> <!-- Wrap input/label pairs for styling if needed -->
+                    <input type="radio" name="q1" value="a" id="q1a">
+                    <label for="q1a"> Пясък</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" value="b" id="q1b">
+                    <label for="q1b"> Пясюк</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" value="c" id="q1c">
+                    <label for="q1c"> Песък</label>
+                </div>
+                <div>
+                    <input type="radio" name="q1" value="d" id="q1d">
+                    <label for="q1d"> Пясек</label>
+                </div>
                 <div class="explanation" id="explanation1">
                     <strong>Обяснение:</strong> Правилното изписване на думата е "Пясък".
                 </div>
@@ -49,18 +57,22 @@
 
             <div class="question-container">
                 <p><strong>2. Къде трябва да се постави запетая в изречението: "Ако вали ще останем вкъщи."?</strong></p>
-                <label>
-                    <input type="radio" name="q2" value="a"> След "вали"
-                </label>
-                <label>
-                    <input type="radio" name="q2" value="b"> След "ще"
-                </label>
-                <label>
-                    <input type="radio" name="q2" value="c"> След "ако"
-                </label>
-                <label>
-                    <input type="radio" name="q2" value="d"> Не се нуждае от запетая
-                </label>
+                <div>
+                    <input type="radio" name="q2" value="a" id="q2a">
+                    <label for="q2a"> След "вали"</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" value="b" id="q2b">
+                    <label for="q2b"> След "ще"</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" value="c" id="q2c">
+                    <label for="q2c"> След "ако"</label>
+                </div>
+                <div>
+                    <input type="radio" name="q2" value="d" id="q2d">
+                    <label for="q2d"> Не се нуждае от запетая</label>
+                </div>
                 <div class="explanation" id="explanation2">
                     <strong>Обяснение:</strong> В сложното съставно изречение с подчинено обстоятелствено изречение за условие ("Ако вали"), запетая се поставя пред главното изречение ("ще останем вкъщи"), т.е. след "вали".
                 </div>
@@ -68,18 +80,22 @@
 
             <div class="question-container">
                 <p><strong>3. Какъв род е думата "кафе"?</strong></p>
-                <label>
-                    <input type="radio" name="q3" value="a"> Мъжки
-                </label>
-                <label>
-                    <input type="radio" name="q3" value="b"> Женски
-                </label>
-                <label>
-                    <input type="radio" name="q3" value="c"> Среден
-                </label>
-                <label>
-                    <input type="radio" name="q3" value="d"> Общ
-                </label>
+                <div>
+                    <input type="radio" name="q3" value="a" id="q3a">
+                    <label for="q3a"> Мъжки</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" value="b" id="q3b">
+                    <label for="q3b"> Женски</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" value="c" id="q3c">
+                    <label for="q3c"> Среден</label>
+                </div>
+                <div>
+                    <input type="radio" name="q3" value="d" id="q3d">
+                    <label for="q3d"> Общ</label>
+                </div>
                 <div class="explanation" id="explanation3">
                     <strong>Обяснение:</strong> Думата "кафе" е от среден род в българския език.
                 </div>
@@ -87,18 +103,22 @@
 
             <div class="question-container">
                 <p><strong>4. Къде пада ударението в думата "градина"?</strong></p>
-                <label>
-                    <input type="radio" name="q4" value="a"> На първата сричка (гра-)
-                </label>
-                <label>
-                    <input type="radio" name="q4" value="b"> На втората сричка (-ди-)
-                </label>
-                <label>
-                    <input type="radio" name="q4" value="c"> На третата сричка (-на)
-                </label>
-                <label>
-                    <input type="radio" name="q4" value="d"> Няма ударение
-                </label>
+                <div>
+                    <input type="radio" name="q4" value="a" id="q4a">
+                    <label for="q4a"> На първата сричка (гра-)</label>
+                </div>
+                <div>
+                    <input type="radio" name="q4" value="b" id="q4b">
+                    <label for="q4b"> На втората сричка (-ди-)</label>
+                </div>
+                <div>
+                    <input type="radio" name="q4" value="c" id="q4c">
+                    <label for="q4c"> На третата сричка (-на)</label>
+                </div>
+                <div>
+                    <input type="radio" name="q4" value="d" id="q4d">
+                    <label for="q4d"> Няма ударение</label>
+                </div>
                 <div class="explanation" id="explanation4">
                     <strong>Обяснение:</strong> Ударението в думата "градина" пада на последната сричка: гради́на.
                 </div>
@@ -106,18 +126,22 @@
 
             <div class="question-container">
                 <p><strong>5. Кое е правилното множествено число на "къща"?</strong></p>
-                <label>
-                    <input type="radio" name="q5" value="a"> Къщи
-                </label>
-                <label>
-                    <input type="radio" name="q5" value="b"> Къщове
-                </label>
-                <label>
-                    <input type="radio" name="q5" value="c"> Къщии
-                </label>
-                <label>
-                    <input type="radio" name="q5" value="d"> Къщета
-                </label>
+                <div>
+                    <input type="radio" name="q5" value="a" id="q5a">
+                    <label for="q5a"> Къщи</label>
+                </div>
+                <div>
+                    <input type="radio" name="q5" value="b" id="q5b">
+                    <label for="q5b"> Къщове</label>
+                </div>
+                <div>
+                    <input type="radio" name="q5" value="c" id="q5c">
+                    <label for="q5c"> Къщии</label>
+                </div>
+                <div>
+                    <input type="radio" name="q5" value="d" id="q5d">
+                    <label for="q5d"> Къщета</label>
+                </div>
                 <div class="explanation" id="explanation5">
                     <strong>Обяснение:</strong> Правилното множествено число на "къща" е "къщи".
                 </div>
@@ -125,18 +149,22 @@
 
             <div class="question-container">
                 <p><strong>6. Изберете правилния вариант:</strong></p>
-                <label>
-                    <input type="radio" name="q6" value="a"> Петстоттин
-                </label>
-                <label>
-                    <input type="radio" name="q6" value="b"> Петстотин
-                </label>
-                <label>
-                    <input type="radio" name="q6" value="c"> Пестотин
-                </label>
-                <label>
-                    <input type="radio" name="q6" value="d"> Петстотиин
-                </label>
+                <div>
+                    <input type="radio" name="q6" value="a" id="q6a">
+                    <label for="q6a"> Петстоттин</label>
+                </div>
+                <div>
+                    <input type="radio" name="q6" value="b" id="q6b">
+                    <label for="q6b"> Петстотин</label>
+                </div>
+                <div>
+                    <input type="radio" name="q6" value="c" id="q6c">
+                    <label for="q6c"> Пестотин</label>
+                </div>
+                <div>
+                    <input type="radio" name="q6" value="d" id="q6d">
+                    <label for="q6d"> Петстотиин</label>
+                </div>
                 <div class="explanation" id="explanation6">
                     <strong>Обяснение:</strong> Правилното изписване на числителното име е "петстотин". (Забележка: Опциите в оригиналния въпрос бяха дублирани, коригирах ги за яснота).
                 </div>
@@ -144,18 +172,22 @@
 
             <div class="question-container">
                 <p><strong>7. Кой глагол е правилен?</strong></p>
-                <label>
-                    <input type="radio" name="q7" value="a"> Пече
-                </label>
-                <label>
-                    <input type="radio" name="q7" value="b"> Пека
-                </label>
-                <label>
-                    <input type="radio" name="q7" value="c"> Пеке
-                </label>
-                <label>
-                    <input type="radio" name="q7" value="d"> Пеквам
-                </label>
+                <div>
+                    <input type="radio" name="q7" value="a" id="q7a">
+                    <label for="q7a"> Пече</label>
+                </div>
+                <div>
+                    <input type="radio" name="q7" value="b" id="q7b">
+                    <label for="q7b"> Пека</label>
+                </div>
+                <div>
+                    <input type="radio" name="q7" value="c" id="q7c">
+                    <label for="q7c"> Пеке</label>
+                </div>
+                <div>
+                    <input type="radio" name="q7" value="d" id="q7d">
+                    <label for="q7d"> Пеквам</label>
+                </div>
                 <div class="explanation" id="explanation7">
                     <strong>Обяснение:</strong> Правилната форма на глагола в 1 л. ед.ч., сег. време е "пека". "Пече" е 3 л. ед.ч.
                 </div>
@@ -163,18 +195,22 @@
 
             <div class="question-container">
                 <p><strong>8. Кое изписване на птицата "щраус" е вярно?</strong></p>
-                <label>
-                    <input type="radio" name="q8" value="a"> Щраус
-                </label>
-                <label>
-                    <input type="radio" name="q8" value="b"> Щраусс
-                </label>
-                <label>
-                    <input type="radio" name="q8" value="c"> Щрауз
-                </label>
-                <label>
-                    <input type="radio" name="q8" value="d"> Щрауц
-                </label>
+                <div>
+                    <input type="radio" name="q8" value="a" id="q8a">
+                    <label for="q8a"> Щраус</label>
+                </div>
+                <div>
+                    <input type="radio" name="q8" value="b" id="q8b">
+                    <label for="q8b"> Щраусс</label>
+                </div>
+                <div>
+                    <input type="radio" name="q8" value="c" id="q8c">
+                    <label for="q8c"> Щрауз</label>
+                </div>
+                <div>
+                    <input type="radio" name="q8" value="d" id="q8d">
+                    <label for="q8d"> Щрауц</label>
+                </div>
                 <div class="explanation" id="explanation8">
                     <strong>Обяснение:</strong> Правилното изписване на думата е "щраус".
                 </div>
@@ -182,18 +218,22 @@
 
             <div class="question-container">
                 <p><strong>9. Попълнете празното място: "Дадох книга на __."</strong></p>
-                <label>
-                    <input type="radio" name="q9" value="a"> приятел
-                </label>
-                <label>
-                    <input type="radio" name="q9" value="b"> приятеля
-                </label>
-                <label>
-                    <input type="radio" name="q9" value="c"> приятелът
-                </label>
-                <label>
-                    <input type="radio" name="q9" value="d"> приятелят
-                </label>
+                <div>
+                    <input type="radio" name="q9" value="a" id="q9a">
+                    <label for="q9a"> приятел</label>
+                </div>
+                <div>
+                    <input type="radio" name="q9" value="b" id="q9b">
+                    <label for="q9b"> приятеля</label>
+                </div>
+                <div>
+                    <input type="radio" name="q9" value="c" id="q9c">
+                    <label for="q9c"> приятелът</label>
+                </div>
+                <div>
+                    <input type="radio" name="q9" value="d" id="q9d">
+                    <label for="q9d"> приятелят</label>
+                </div>
                 <div class="explanation" id="explanation9">
                     <strong>Обяснение:</strong> В случая е необходима членувана форма за винителен падеж (макар и неформално маркиран в българския), която е "приятеля".
                 </div>
@@ -201,18 +241,22 @@
 
             <div class="question-container">
                 <p><strong>10. Кой предлог е правилен: "Отивам __ училище."?</strong></p>
-                <label>
-                    <input type="radio" name="q10" value="a"> на
-                </label>
-                <label>
-                    <input type="radio" name="q10" value="b"> в
-                </label>
-                <label>
-                    <input type="radio" name="q10" value="c"> към
-                </label>
-                <label>
-                    <input type="radio" name="q10" value="d"> до
-                </label>
+                <div>
+                    <input type="radio" name="q10" value="a" id="q10a">
+                    <label for="q10a"> на</label>
+                </div>
+                <div>
+                    <input type="radio" name="q10" value="b" id="q10b">
+                    <label for="q10b"> в</label>
+                </div>
+                <div>
+                    <input type="radio" name="q10" value="c" id="q10c">
+                    <label for="q10c"> към</label>
+                </div>
+                <div>
+                    <input type="radio" name="q10" value="d" id="q10d">
+                    <label for="q10d"> до</label>
+                </div>
                 <div class="explanation" id="explanation10">
                     <strong>Обяснение:</strong> Правилният предлог за посока към затворено пространство или институция като училище е "в".
                 </div>

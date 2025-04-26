@@ -77,7 +77,8 @@ header {
 footer {
     background: linear-gradient(90deg, #06c0e6, #14dee2); /* Consistent gradient */
     color: white; /* Consistent text color */
-    margin-top: auto; /* Consistent top margin */
+    /* margin-top: auto; */ /* Removed this line */
+    margin-top: 40px; /* Added fixed margin for spacing */
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2); /* Consistent shadow */
     width: 100%; /* Ensure footer spans full width */
     text-align: center;

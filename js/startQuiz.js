@@ -114,7 +114,7 @@ quizForm.addEventListener('submit', (event) => {
     });
 
     // Display the results
-    let levelText = '';
+    let levelText = ' (Easy ниво)';
     if (currentLevel !== 'easy') {
         levelText = ` (${currentLevel.charAt(0).toUpperCase() + currentLevel.slice(1)} ниво)`;
     }
